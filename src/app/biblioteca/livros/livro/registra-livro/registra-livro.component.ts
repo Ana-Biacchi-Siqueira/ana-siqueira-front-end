@@ -14,7 +14,7 @@ export class RegistraLivroComponent {
 
   livros: Livro[] = [];
   registraForm!: FormGroup;
-  formHeader: string = 'Registra Autor';
+  formHeader: string = 'Registra Livro';
   nomeAutor: string = '';
 
   erroAoCriarAutor: string ='';

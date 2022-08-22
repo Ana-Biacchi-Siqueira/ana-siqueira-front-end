@@ -1,27 +1,19 @@
 # AnaSiqueiraFrontEnd
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.9.
+Para iniciar o projeto precisa-se ter os seguintes softwares instalados;
 
-## Development server
+VSC, Eclipse, MySQL Workbench e Postman;
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Primeiramente se inicia a API com o Eclipse, a API que ultilizamos pode ser encontrada aqui (https://github.com/aceleragep/biblioteca.git)
+Na pasta onde for baixada, devera se abrir a Prompt de comando e dar o seguinte comando "npm start"
+Nessa API precisa alterar o '@CrossOrigin' dos controllers para '@CrossOrigin(origins = "http://localhost:4200/")'
+Abrir já o MySQL e rodar a aplicação da API;
 
-## Code scaffolding
+Após fazer isso, podemos adicionar Autores e Livros usando as seguintes URL's em POST no Postman (http://localhost:8080/api/autores) com o seguinte comando em "Body", "Raw" selecionado como "JSON" { "nome": "Exemplo",
+   "biografia": "Exemplo" } e (localhost:8080/api/livros) com o comando em "Body", "Raw" selecionado como "JSON" dessa forma { "titulo": "Exemplo",   "anoLancamento": "Exemplo", "autor": "Exemplo" }.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Após fazer esses passos no VSC abrimos o projeto e caso não haja a framework Angular na maquina, deverá instalar com o comando "npm i @angular/cli", também se instala pela prompt de comando.
+Junto com ele, pode se instalar o bootstrap com o comando   "npm i bootstrap".
 
-## Build
+Ao abrir o projeto, pode se abrir um terminal novo e dar o comando "ng serve", após isso para acessar a lista de autores vá até a URL "http://localhost:4200/listar-autores" e para ir ao formulário de registro, basta clicar em "Registrar Autores", e para acessar a lista de livros vá até a URL "http://localhost:4200/listar-livros" e para ir ao formulário de registro, basta clicar em "Registrar Livros".
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
