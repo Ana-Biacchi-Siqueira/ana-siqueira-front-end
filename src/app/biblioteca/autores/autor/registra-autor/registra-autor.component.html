@@ -1,0 +1,39 @@
+<div class="form-wrapper">
+  <form [formGroup]="registraForm" (submit)="cadastraAutor()">
+    <h2 class="text-center text-info">{{formHeader}}</h2>
+    <div class="group">
+      <label class="my-1" for="nome">Nome: *</label>
+      <input
+        class="form-control"
+        formControlName="nome"
+        type="text"
+        id=""
+        name="nome"
+        required
+        placeholder="Nome"
+        />
+      </div>
+
+
+    <div>
+      <label class="my-1" for="biografia">Biografia *</label>
+      <input
+        class="form-control"
+        formControlName="biografia"
+        type="text"
+        id="biografia"
+        name="biografia"
+        required
+        placeholder="Biografia"
+      />
+    </div>
+
+    <div>
+      <button [disabled]="registraForm.invalid" type="submit" (click)="cadastraAutor()" class="btn btn-primary mx-3 my-2">
+        Salvar
+      </button>
+
+      <button class="btn btn-danger btn-block">Cancelar</button>
+    </div>
+  </form>
+</div>

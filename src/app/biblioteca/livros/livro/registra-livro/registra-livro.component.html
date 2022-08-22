@@ -1,0 +1,52 @@
+<div class="form-wrapper">
+  <form [formGroup]="registraForm" (submit)="cadastraLivro()">
+    <h2 class="text-center text-info">{{formHeader}}</h2>
+    <div class="group">
+      <label class="my-1" for="nome">Titulo: *</label>
+      <input
+        class="form-control"
+        formControlName="titulo"
+        type="text"
+        id=""
+        name="titulo"
+        required
+        placeholder="Titulo"
+        />
+      </div>
+
+
+    <div>
+      <label class="my-1" for="anoLancamento">Ano de lançamento: *</label>
+      <input
+        class="form-control"
+        formControlName="anoLancamento"
+        type="number"
+        id=""
+        name="anoLancamento"
+        required
+        placeholder="Ano"
+      />
+    </div>
+
+    <div>
+      <label class="my-1" for="autor">Autor: *</label>
+      <input
+        class="form-control"
+        formControlName="autor"
+        type="text"
+        id=""
+        name="autor"
+        required
+        placeholder="Autor"
+      />
+    </div>
+
+    <div>
+      <button [disabled]="registraForm.invalid" type="submit" (click)="cadastraLivro()" class="btn btn-primary mx-3 my-2">
+        Salvar
+      </button>
+
+      <button class="btn btn-danger btn-block">Cancelar</button>
+    </div>
+  </form>
+</div>

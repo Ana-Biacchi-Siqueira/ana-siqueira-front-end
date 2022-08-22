@@ -1,0 +1,40 @@
+<div *ngIf="autores;" class="container autores-table">
+
+  <div class="headers">
+    <h2 class="table-title">Autores</h2>
+    <button class="btn btn-registrar" routerLink="/cadastrar-autores">Registrar Autores</button>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>
+          Nome do Autor:
+        </th>
+        <th>Biografia do Autor:</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody class="text-center">
+      <tr *ngFor="let autor of autores" id="autor">
+        <td>{{autor.nome}}</td>
+        <td>{{autor.biografia}}</td>
+        <td>
+          <button class="btn btn-primary">Editar</button>
+        </td>
+        <td>
+          <button class="btn btn-danger" (click)="deletaAutores">Deletar</button>
+        </td>
+
+
+      </tr>
+
+    </tbody>
+  </table>
+
+  <ng-template *ngIf="autores.length <= 0 && erroAoListar==''">
+    <p class="text-danger">"Nenhum autor encontrado."</p>
+  </ng-template>
+
+</div>
