@@ -5,7 +5,7 @@ Para iniciar o projeto precisa-se ter os seguintes softwares instalados;
 VSC, Eclipse, MySQL Workbench e Postman;
 
 Primeiramente se inicia a API com o Eclipse, a API que ultilizamos pode ser encontrada aqui (https://github.com/aceleragep/biblioteca.git)
-Na pasta onde for baixada, devera se abrir a Prompt de comando e dar o seguinte comando "npm start"
+Na pasta onde for baixada, devera se abrir a Prompt de comando e dar o seguinte comando "npm install"
 Nessa API precisa alterar o '@CrossOrigin' dos controllers para '@CrossOrigin(origins = "http://localhost:4200/")'
 Abrir já o MySQL e rodar a aplicação da API;
 
